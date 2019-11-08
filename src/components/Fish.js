@@ -4,12 +4,12 @@ import { formatPrice } from '../helpers';
 class Fish extends React.Component {
 
     render() {
-        const {image, name, price, desc, status} = this.props.details;
+        const {name, price, desc, status} = this.props.details;
         const isAvailable = status === 'available';
         const buttonText = isAvailable ? 'Add To Order' : 'Sold Out!';
         return (
         <li className="menu-fish">
-            <img src={image} alt={name}/>
+            <img src={require('../images/bip.jpg')} alt={name}/>
             <h3 className="fish-name">
                 {name}
             </h3>

@@ -24,14 +24,12 @@
   padding: 0;
 }
 .count-enter {
-  background: #f00;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(0%) scale(0.1);
+          transform: translateY(0%) scale(0.1);
 }
 .count-enter.count-enter-active {
-  background: #ff0;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -46,9 +44,9 @@
   bottom: 0;
 }
 .count-exit.count-exit-active {
-  background: #008000;
-  -webkit-transform: translateY(-100%) scale(3);
-          transform: translateY(-100%) scale(3);
+  background: #fff;
+  -webkit-transform: translateY(-100%) scale(0.1);
+          transform: translateY(-100%) scale(0.1);
 }
 @font-face {
   font-family: "haymakerregular";
@@ -381,12 +379,20 @@ input#fold:checked + label {
   background: #fff;
   color: #000;
 }
+.grid {
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+span.price {
+  justify-self: end;
+}
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-ul.order li {
+ul.order li, div.order-wrap div {
   border-bottom: 1px solid #000;
   padding: 2rem 0;
   display: -webkit-box;
@@ -406,7 +412,7 @@ ul.order li button {
   line-height: 1;
   padding: 0;
 }
-ul.order li.total {
+div.order-wrap div {
   font-weight: 600;
   border-bottom: 3px solid #000;
   border-top: 3px double #000;
