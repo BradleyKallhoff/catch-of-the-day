@@ -392,7 +392,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-ul.order li, div.order-wrap div {
+ul.order li, div.total {
   border-bottom: 1px solid #000;
   padding: 2rem 0;
   display: -webkit-box;
@@ -412,7 +412,7 @@ ul.order li button {
   line-height: 1;
   padding: 0;
 }
-div.order-wrap div {
+div.order-wrap div.total {
   font-weight: 600;
   border-bottom: 3px solid #000;
   border-top: 3px double #000;
